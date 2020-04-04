@@ -10,3 +10,6 @@ docker --version
 
 #setting docker to auto start
 sudo systemctl enable docker
+
+#disable swap partion
+sudo swapoff -a
