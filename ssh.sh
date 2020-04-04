@@ -3,6 +3,9 @@
 #This should be done on the client.
 #To create your public and private SSH keys on the command-line:
 echo "running $0"
+echo "getting username and hostname"
+uname=$(whoami)
+hname=$(hostname)
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 ssh-keygen -t rsa
@@ -10,7 +13,8 @@ ssh-keygen -t rsa
 #ssh-keygen -t rsa -b 4096
 #copy keys to ssh server
 #ssh-copy-id <username>@<host>
-ssh-copy-id $USER@$HOSTNAME
+ssh-copy-id $uname@$hname
+
 
 #/etc/motd (Message of the Day)
 #/etc/ssh/sshd_config: Change the setting PrintLastLog to "no",
