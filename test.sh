@@ -5,3 +5,6 @@ hname=$(hostname)
 printf "%s@%s\n" "$uname" "$hname"
 echo $USER@$HOSTNAME
 echo $uname@$hname
+
+read var1
+echo $var1
